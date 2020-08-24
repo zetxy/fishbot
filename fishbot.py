@@ -37,7 +37,7 @@ listener.start()
 
 def catch_fish(x, y):
     gui.moveTo(x, y)
-    t = random.random() * 2
+    t = random.random() * 0.8
     time.sleep(t)
     gui.rightClick()
 
