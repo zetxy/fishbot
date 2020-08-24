@@ -60,14 +60,14 @@ python fishbot.py [tolerance] [tresh]
 ```
 
 Tolerance is the pixel saturation amount which will be taken into account. It should be and
-integer between 1 and 254. Recommended is 15. Increasing the tolerance may result in more fish caught, but also 
+integer between 1 and 254. Recommended is 20. Increasing the tolerance may result in more fish caught, but also 
 increases the amount of false positives produced.
 
 Again, tresh means, how many white new white pixels should be considered enough.
-This value is dependent on the scene, time of day. Set it accordingly to your preferences. 25 is considered to be
+This value is dependent on the scene, time of day. Set it accordingly to your preferences. 20 is considered to be
 the default value right now. You can lower it if you think that too much fish are being missed.
 
 So example usage could be
 ```
-python fishbot.py 15 25
+python fishbot.py 20 20
 ```
