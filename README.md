@@ -18,6 +18,7 @@ Navigate to the bottom of the page and download an installer. You probably want 
 `Windows x86-64 executable installer`.
 
 ### Installation
+In the root folder of this project, run this in your command line:
 ```
 pip3 install -r requirements.txt
 ```
