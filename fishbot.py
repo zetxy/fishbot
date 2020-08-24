@@ -25,9 +25,11 @@ def prints(s):
 
 
 def on_press(key):
-    if key == Key.f9:
-        os._exit(0)
-
+    try:
+        if key.char == "p":
+            os._exit(0)
+    except:
+        pass
 
 listener = keyboard.Listener(on_press=on_press)
 listener.start()
@@ -72,7 +74,7 @@ def attempt_catch(mon):
 def main_loop(mon):
     while True:
         gui.hotkey('ctrl', 'alt', 'z')
-        gui.press('f10')
+        gui.press('o')
 
         if attempt_catch(mon):
             prints("Attempt successful")
