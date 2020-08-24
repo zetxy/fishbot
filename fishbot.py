@@ -9,7 +9,6 @@ import numpy as np
 import pyautogui as gui
 import pyttsx3
 from pynput import keyboard
-from pynput.keyboard import Key
 
 engine = pyttsx3.init()
 engine.runAndWait()
@@ -37,9 +36,7 @@ listener.start()
 
 
 def catch_fish(x, y):
-    gui.moveTo(x, y, 2, gui.easeOutQuad)
-    t = random.random() * 0.8
-    time.sleep(t)
+    gui.moveTo(x, y, random.uniform(0.3, 0.4), gui.easeOutQuad)
     gui.rightClick()
 
 
@@ -83,16 +80,17 @@ def main_loop(mon):
             prints("Attempt failed")
 
         gui.hotkey('ctrl', 'alt', 'z')
-        t = random.random() * 8
+        t = random.uniform(3.0, 4.0)
         prints(f"Waiting for {t:.1f} seconds")
+        time.sleep(t)
 
 
 if __name__ == '__main__':
     diff = int(sys.argv[1])
     tresh = int(sys.argv[2])
 
-    prints(f"Starting in {10}...")
-    for i in range(9, 0, -1):
+    prints(f"Starting in {5}...")
+    for i in range(4, 0, -1):
         prints(f"{i}...")
 
     prints("Initializing main routine")
