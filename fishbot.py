@@ -31,12 +31,13 @@ def on_press(key):
     except:
         pass
 
+
 listener = keyboard.Listener(on_press=on_press)
 listener.start()
 
 
 def catch_fish(x, y):
-    gui.moveTo(x, y)
+    gui.moveTo(x, y, 2, gui.easeOutQuad)
     t = random.random() * 0.8
     time.sleep(t)
     gui.rightClick()
