@@ -1,4 +1,5 @@
 import os
+import sys
 from datetime import datetime
 import random
 import time
@@ -12,6 +13,9 @@ from pynput.keyboard import Key
 
 engine = pyttsx3.init()
 engine.runAndWait()
+
+diff = None
+tresh = None
 
 
 def prints(s):
@@ -42,12 +46,12 @@ def attempt_catch(mon):
     while True:
         im = np.array(screen.grab(mon))
         im_gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
-        _, splash = cv2.threshold(im_gray, 240, 255, cv2.THRESH_BINARY)
+        _, splash = cv2.threshold(im_gray, 255 - diff, 255, cv2.THRESH_BINARY)
         spc = splash.copy()
         if last is not None:
             splash = splash - last
             white = np.sum(splash / 255)
-            if white > 30:
+            if white > tresh:
                 kernel = np.ones((3, 3), np.uint8)
                 splash = cv2.dilate(splash, kernel, iterations=1)
                 contours, hierarchy = cv2.findContours(splash, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
@@ -81,6 +85,9 @@ def main_loop(mon):
 
 
 if __name__ == '__main__':
+    diff = int(sys.argv[1])
+    tresh = int(sys.argv[2])
+
     prints(f"Starting in {10}...")
     for i in range(9, 0, -1):
         prints(f"{i}...")
