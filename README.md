@@ -16,6 +16,7 @@ https://www.python.org/downloads/release/python-379/
 
 Navigate to the bottom of the page and download an installer. You probably want to download the
 `Windows x86-64 executable installer`.
+You might also need to add python executable to your Windows PATH.
 
 ### Installation
 In the root folder of this project, run this in your command line:
