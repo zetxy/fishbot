@@ -26,7 +26,7 @@ pixels. This also means that there should not be much white objects in the scene
 Higher ambient light is also beneficial.
 
 Some requirements must be met in order to use this bot.
-1. Have Fishing bound to F10 keybing. The bot will attempt to press this key in order to start
+1. Have Fishing bound to F10 keybind. The bot will attempt to press this key in order to start
 fishing.
 2. Be in first person mode to minimize occlusion and get the best performance from your bot.
 3. Pick a static scene. In order to maximize the accuracy, there should be nothing moving around 
