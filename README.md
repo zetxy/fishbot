@@ -6,6 +6,17 @@
 python 3.x - recommended python 3.7
 ```
 
+On Ubuntu/Linux
+```
+sudo apt-get install python3.7
+```
+
+On Windows, a bit of hand job is required.
+https://www.python.org/downloads/release/python-379/
+
+Navigate to the bottom of the page and download an installer. You probably want to download the
+`Windows x86-64 executable installer`.
+
 ### Installation
 ```
 pip3 install -r requirements.txt
