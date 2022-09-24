@@ -39,7 +39,7 @@ pixels. This also means that there should not be much white objects in the scene
 Higher ambient light is also beneficial.
 
 Some requirements must be met in order to use this bot.
-1. Have Fishing bound to F10 keybind. The bot will attempt to press this key in order to start
+1. Have Fishing bound to O keybind. The bot will attempt to press this key in order to start
 fishing.
 2. Be in first person mode to minimize occlusion and get the best performance from your bot.
 3. Pick a static scene. In order to maximize the accuracy, there should be nothing moving around 
@@ -52,7 +52,7 @@ First of all, place your character in a place, suitable for fishing. After that 
 run the program. After initial countdown, the bot will start catching fish.
 
 After each attempt, UI is temporarily restored - e.g. in order to check chat messages.
-To turn off the bot, simply hit F9 and wait for a while.
+To turn off the bot, simply hit P and wait for a while.
 
 You can run it like this 
 ```bash
