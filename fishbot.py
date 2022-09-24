@@ -93,7 +93,7 @@ if __name__ == '__main__':
     for i in range(4, 0, -1):
         prints(f"{i}...")
 
-    prints("Initializing main routine")
+    prints("Initializing")
     with mss.mss() as screen:
         mon = screen.monitors[0]
         main_loop(mon)
